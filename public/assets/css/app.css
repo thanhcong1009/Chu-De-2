@@ -1,0 +1,132 @@
+.error-box {
+    display: flex;
+    flex-direction: column;
+}
+.msg-success,
+.msg-error {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+.msg-success {
+    color: green;
+}
+
+.card-product {
+    transition: 0.3s linear;
+}
+
+.card-product:hover {
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .21) !important;
+}
+
+.card-product:hover .card-title {
+    color: #1b55f5;
+}
+
+.card-product .card-title {
+    color: #727272;
+    transition: 0.3s linear;
+}
+
+.card-product .gia-goc {
+    color: #147ef7;
+    font-size: 20px;
+}
+.card-product .gia-goc.sale {
+    color: #727272;
+    text-decoration-line: line-through;
+}
+
+.card-product .gia-hien-tai {
+    color: #f00;
+    font-size: 24px;
+}
+
+.gia-goc {
+    color: #147ef7;
+    font-size: 20px;
+}
+.gia-goc.sale {
+    color: #727272;
+    text-decoration-line: line-through;
+}
+
+.gia-hien-tai {
+    color: #f00;
+    font-size: 24px;
+}
+
+.review-rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-size: 18px;
+}
+.review-rate i {
+    font-size: 18px;
+}
+.review-rate .review-star {
+    color: #FFAB00;
+    position: relative;
+}
+
+.review-star-rate {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--width-star);
+    overflow: hidden;
+    display: flex;
+}
+
+.fa-star, .fa-star-half-alt {
+    font-size: 14px;
+    color: #FFAB00;
+}
+.review-star-vote {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.review-star-vote input {
+    position: relative;
+    width: 14px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    appearance: none;
+    overflow: hidden;
+}
+
+.review-star-vote input::before {
+    content: "\f005";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: 2px;
+    font-size: 21px;
+    color: #FFAB00;
+    transition: 0.2s;
+}
+.review-star-vote input:nth-child(2n+1)::before {
+    right: 2px;
+    left: initial;
+}
+
+.review-star-vote input:hover ~ input::before,
+.review-star-vote input:hover::before,
+.review-star-vote input:checked ~ input::before,
+.review-star-vote input:checked::before {
+    font-weight: 900;
+}
+
+.body-order-history {
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s linear;
+}
